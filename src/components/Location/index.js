@@ -7,13 +7,13 @@ const Location = ({ embed, name, url }) => {
 
         <div
             className={[
-                'flex flex-col p-4 text-content font-medium bg-layout-600 rounded-md my-2 w-full gap-3 transition-all cursor-pointer',
+                'flex flex-col p-4 text-content font-medium bg-layout-600 rounded-md my-2 w-full  transition-all cursor-pointer',
                 !isOpen && 'hover:bg-layout-700 hover:scale-[1.02]',
                 !isOpen && 'active:bg-layout-600 active:scale-100',
             ].join(' ')}
             onClick={() => setIsOpen(!isOpen)}
         >
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
                 <div className="flex justify-between items-center">
                     <img src='/assets/icons/location.png' alt={name} width='34px' />
                 </div>
