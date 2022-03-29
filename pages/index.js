@@ -10,7 +10,7 @@ const Home = () => {
       <Head>
         <title>Omeesha Makeovers - Links</title>
       </Head>
-      <div className='flex flex-col items-center w-full min-w-[340px] min-h-screen p-4 pt-[56px] md:w-[400px]'>
+      <div className='flex flex-col items-center w-full min-w-[340px] min-h-screen p-4 py-[56px] md:w-[400px]'>
         <Logo />
         {
           links.map((link, index) => (
