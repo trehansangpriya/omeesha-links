@@ -1,4 +1,4 @@
-[
+const links = [
     {
         "name": "Call Us",
         "url": "tel:+919565717888",
@@ -30,3 +30,4 @@
         "icon": "/assets/icons/google.png"
     }
 ]
+export default links
