@@ -7,7 +7,7 @@ const Location = ({ embed, name, url }) => {
 
         <div
             className={[
-                'flex flex-col p-4 text-content font-medium bg-layout-600 rounded-md my-2 w-full  transition-all cursor-pointer',
+                'flex flex-col p-4 text-content font-medium bg-layout-600 rounded-md my-2 w-full gap-3 transition-all cursor-pointer',
                 !isOpen && 'hover:bg-layout-700 hover:scale-[1.02]',
                 !isOpen && 'active:bg-layout-600 active:scale-100',
             ].join(' ')}
