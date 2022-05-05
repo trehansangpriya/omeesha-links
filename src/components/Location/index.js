@@ -23,7 +23,7 @@ const Location = ({ embed, name, url }) => {
             </div>
             {isOpen && (
                 <>
-                    {embed}
+                    <iframe src={embed} width="100%" height="300" style={{ border: 0, borderRadius: '6px' }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <a
                         className={[
                             'flex items-center justify-center leading-none p-3 w-full gap-2 bg-primary-600 rounded-md transition-all',

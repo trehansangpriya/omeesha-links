@@ -14,7 +14,7 @@ const Link = ({ name, url, icon }) => {
             rel='noopener noreferrer'
         >
             <div className="flex justify-between items-center">
-                <img src={icon} alt={name} width='34px' />
+                <img src={`/assets/icons/${icon}.png`} alt={name} width='34px' />
             </div>
             <p className='leading-none'>
                 {name}
