@@ -14,9 +14,13 @@ const Home = () => {
     setLoading(true)
     onSnapshot(collection(db, 'links'), (snapshot) => {
       // set links when linkType === Link
-      setLinks(snapshot.docs.filter(doc => doc.data().linkType === 'Link').map(doc => doc.data()))
+      setLinks(snapshot.docs.filter(doc => doc.data().linkType === 'Link').sort(
+        (a, b) => a.data().order - b.data().order
+      ).map(doc => doc.data()))
       // set locations when linkType === Location
-      setLocations(snapshot.docs.filter(doc => doc.data().linkType === 'Location').map(doc => doc.data()))
+      setLocations(snapshot.docs.filter(doc => doc.data().linkType === 'Location').sort(
+        (a, b) => a.data().order - b.data().order
+      ).map(doc => doc.data()))
       setLoading(false)
     })
   }, [])
