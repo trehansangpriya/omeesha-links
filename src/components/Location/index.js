@@ -1,17 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react'
+import React from 'react'
 import { FiNavigation } from 'react-icons/fi'
 const Location = ({ embed, name, url }) => {
-    const [isOpen, setIsOpen] = useState(false)
     return (
 
         <div
             className={[
-                'flex flex-col p-4 text-content font-medium bg-layout-600 rounded-md my-2 w-full gap-3 transition-all cursor-pointer',
-                !isOpen && 'hover:bg-layout-700 hover:scale-[1.02]',
-                !isOpen && 'active:bg-layout-600 active:scale-100',
+                'flex flex-col p-4 text-content font-medium bg-layout-600 rounded-md my-2 w-full gap-3 transition-all',
             ].join(' ')}
-            onClick={() => setIsOpen(!isOpen)}
+
         >
             <div className="flex items-center gap-2">
                 <div className="flex justify-between items-center">
@@ -21,24 +18,23 @@ const Location = ({ embed, name, url }) => {
                     {name}
                 </p>
             </div>
-            {isOpen && (
-                <>
-                    <iframe src={embed} width="100%" height="300" style={{ border: 0, borderRadius: '6px' }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <a
-                        className={[
-                            'flex items-center justify-center leading-none p-3 w-full gap-2 bg-primary-600 rounded-md transition-all',
-                            'hover:bg-primary-700 hover:scale-[1.02]',
-                            'active:bg-primary-600 active:scale-100',
-                        ].join(' ')}
-                        href={url}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        <FiNavigation size={20} />
-                        Navigate
-                    </a>
-                </>
-            )}
+
+            <>
+                <iframe src={embed} width="100%" height="300" style={{ border: 0, borderRadius: '6px' }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a
+                    className={[
+                        'flex items-center justify-center leading-none p-3 w-full gap-2 bg-primary-600 rounded-md transition-all',
+                        'hover:bg-primary-700 hover:scale-[1.02]',
+                        'active:bg-primary-600 active:scale-100',
+                    ].join(' ')}
+                    href={url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    <FiNavigation size={20} />
+                    Navigate
+                </a>
+            </>
         </div>
     )
 }

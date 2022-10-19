@@ -40,7 +40,7 @@ const Home = () => {
                 ))
               }
               <br />
-              <p className='w-full text-headingm my-1 font-heading'>Addresses</p>
+              <p className='w-full text-headingm my-2 text-center font-heading'>Location</p>
               {
                 locations.map((location, index) => (
                   <Location {...location} key={index} />
